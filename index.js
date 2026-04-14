@@ -19,6 +19,7 @@ const app = express();
 mongodbConnection();
 
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -41,11 +42,11 @@ app.use("/owners", ownersRouter);
 app.use("/products", productsRouter);
 app.use("/users", usersRouter);
 app.use("/", indexRouter);
-app.get("/", (req, res) => {
-  //   res.render("index");
-  // let error=req.flash("error")
-  res.render("login");
-});
+// app.get("/", (req, res) => {
+//   //   res.render("index");
+//   // let error=req.flash("error")
+//   res.render("login");
+// });
 
 if (require.main === module) {
   app.listen(3000, () => {
