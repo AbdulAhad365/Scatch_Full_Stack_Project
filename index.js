@@ -37,15 +37,15 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/owners", ownersRouter);
+app.use("/products", productsRouter);
+app.use("/users", usersRouter);
+app.use("/", indexRouter);
 app.get("/", (req, res) => {
   //   res.render("index");
   // let error=req.flash("error")
   res.render("login");
 });
-app.use("/owners", ownersRouter);
-app.use("/products", productsRouter);
-app.use("/users", usersRouter);
-app.use("/", indexRouter);
 
 if (require.main === module) {
   app.listen(3000, () => {
