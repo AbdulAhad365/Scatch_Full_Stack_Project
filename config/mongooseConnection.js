@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-// const config=require("config")
+const config=require("config")
 const debug = require("debug")("development:mongoose");
 
 async function main() {
   await mongoose
-    .connect(`${process.env.MONGODB_URL}/day12`)
+    .connect(`${config.get("MONGODB_URL")}/day12`)
     .then(function () {
       debug("connected to mongodDB");
     })

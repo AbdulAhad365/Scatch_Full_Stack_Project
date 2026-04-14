@@ -5,8 +5,7 @@ const cookie_parser = require("cookie-parser");
 const mongodbConnection = require("./config/mongooseConnection");
 const expressSession = require("express-session");
 const flash = require("connect-flash");
-// const dns=require("dns")
-// dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
 
 // now calling these files
 const ownersRouter = require("./routes/ownersRouter");
@@ -19,7 +18,6 @@ const app = express();
 mongodbConnection();
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -42,16 +40,8 @@ app.use("/owners", ownersRouter);
 app.use("/products", productsRouter);
 app.use("/users", usersRouter);
 app.use("/", indexRouter);
-// app.get("/", (req, res) => {
-//   //   res.render("index");
-//   // let error=req.flash("error")
-//   res.render("login");
-// });
 
-if (require.main === module) {
-  app.listen(3000, () => {
-    console.log("listning at port 3000");
-  });
-}
 
-module.exports = app;
+app.listen(3000, () => {
+  console.log("listning at port 3000");
+});
