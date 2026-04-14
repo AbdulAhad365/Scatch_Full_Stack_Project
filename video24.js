@@ -5,6 +5,8 @@ const cookie_parser = require("cookie-parser");
 const mongodbConnection = require("./config/mongooseConnection");
 const expressSession = require("express-session");
 const flash = require("connect-flash");
+const dns=require("dns")
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 
 // now calling these files
