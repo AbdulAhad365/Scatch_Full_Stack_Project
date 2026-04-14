@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/spreadsheets/login.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+
+     <% if (error.length > 0) { %>
+  <div class="absolute top-5 left-1/2 -translate-x-1/2 p-10 rounded-md bg-red-500">
+    <span class="text-white">
+      <%= error[0] %>
+    </span>
+  </div>
+<% } %>
+
+<% if (success.length > 0) { %>
+  <div class="absolute top-5 left-1/2 -translate-x-1/2 p-6 rounded-md bg-green-500">
+    <span class="text-white ">
+      <%= success[0] %>
+    </span>
+  </div>
+<% } %> 
+
+    <header>
+      <nav>
+        <p>Scatch</p>
+      </nav>
+    </header>
+
+    <main>
+      <div class="two_part">
+        <div class="left">
+          <h1>Welcome to <span>Scatch</span></h1>
+          <p>Create your own account</p>
+          <div class="form1">
+            <form action="/users/register" method="post">
+              <input
+                type="text"
+                placeholder="Full name"
+                name="full_name"
+                id="full_name"
+              />
+              <input type="email" placeholder="email" name="email" id="email" />
+              <input
+                type="password"
+                placeholder="password"
+                name="password"
+                id="password"
+              />
+              <input class="submit" type="submit" value="Create my account" />
+            </form>
+          </div>
+        </div>
+
+        <!-- right -->
+        <div class="right">
+          <p>Login your Account</p>
+          <div class="form2">
+            <form action="/users/login" method="post">
+              <input
+                type="email"
+                placeholder="email"
+                name="log_email"
+                id="log_email"
+              />
+              <input
+                type="password"
+                placeholder="password"
+                name="log_password"
+                id="log_password"
+              />
+              <input type="submit" class="submit" value="Login" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

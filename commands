@@ -1,0 +1,3 @@
+for windows:
+` $env:DEBUG="development:*"
+ $env:node_env="development"`

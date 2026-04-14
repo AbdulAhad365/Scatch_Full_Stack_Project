@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body header nav p {
+  padding: 0.9rem;
+  font-size: 1.5rem;
+}
+body main .two_part {
+  display: flex;
+  height: 100vh;
+}
+body main .left {
+  width: 60%;
+  margin: 6rem;
+  margin-top: 15rem;
+}
+body main .left h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body main .left h1 span {
+  color: rgba(0, 0, 255, 0.501);
+}
+body main .left p {
+  margin-bottom: 0.5rem;
+}
+body main .left .form1 form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+body main .left .form1 form input {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(215, 171, 171, 0.1764705882);
+}
+body main .left .form1 form .submit {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: rgba(0, 0, 255, 0.501);
+}
+body main .right p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: large;
+}
+body main .right {
+  width: 40%;
+  margin: 6rem;
+  margin-top: 17rem;
+}
+body main .right .form2 form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+body main .right .form2 form input {
+  padding-left: 0.9em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(215, 171, 171, 0.1764705882);
+}
+body main .right .form2 form .submit {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  background-color: rgba(0, 0, 255, 0.501);
+}/*# sourceMappingURL=login.css.map */

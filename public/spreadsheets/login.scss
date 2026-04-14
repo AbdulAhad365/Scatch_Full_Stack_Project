@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  //   header
+  header{
+    nav{
+        p{
+            padding: 0.9rem;
+            font-size: 1.5rem
+        }
+    }
+  }
+  main {
+    .two_part {
+      display: flex;
+      height: 100vh;
+    }
+    .left {
+      width: 60%;
+      //   background-color: red;
+      // align-items: center;
+      // justify-content: center;
+      margin: 6rem;
+      margin-top: 15rem;
+      h1 {
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+        span {
+          color: rgba(0, 0, 255, 0.501);
+        }
+      }
+      p {
+        margin-bottom: 0.5rem;
+      }
+      .form1 {
+        form {
+          display: flex;
+          flex-direction: column;
+
+          gap: 0.7rem;
+          input {
+            padding-left: 0.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-radius: 20px;
+            border: none;
+            background-color: #d7abab2d;
+          }
+          .submit {
+            width: fit-content;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            background-color: rgba(0, 0, 255, 0.501);
+          }
+          // text-align: center;
+        }
+      }
+    }
+    .right {
+      p {
+        margin-bottom: 1rem;
+        font-weight: 400;
+        font-size: large;
+      }
+      width: 40%;
+      //   background-color: firebrick;
+      margin: 6rem;
+      margin-top: 17rem;
+      .form2 {
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 0.7rem;
+          input {
+            padding-left: 0.9em;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-radius: 20px;
+            border: none;
+            background-color: #d7abab2d;
+          }
+          .submit {
+            width: fit-content;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+            background-color: rgba(0, 0, 255, 0.501);
+          }
+          // text-align: center;
+        }
+      }
+    }
+  }
+}
