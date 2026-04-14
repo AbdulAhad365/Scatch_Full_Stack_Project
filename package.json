@@ -5,7 +5,7 @@
   "main": "video24.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node video24.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
