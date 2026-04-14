@@ -8,7 +8,6 @@ const flash = require("connect-flash");
 // const dns=require("dns")
 // dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
-
 // now calling these files
 const ownersRouter = require("./routes/ownersRouter");
 const productsRouter = require("./routes/productRouter");
@@ -17,7 +16,7 @@ const indexRouter = require("./routes/index");
 require("dotenv").config();
 
 const app = express();
-mongodbConnection()
+mongodbConnection();
 
 app.set("view engine", "ejs");
 app.use(express.json());
@@ -38,11 +37,15 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  //   res.render("index");
+  // let error=req.flash("error")
+  res.render("login");
+});
 app.use("/owners", ownersRouter);
 app.use("/products", productsRouter);
 app.use("/users", usersRouter);
 app.use("/", indexRouter);
-
 
 if (require.main === module) {
   app.listen(3000, () => {
@@ -50,4 +53,4 @@ if (require.main === module) {
   });
 }
 
-module.exports=app
+module.exports = app;
